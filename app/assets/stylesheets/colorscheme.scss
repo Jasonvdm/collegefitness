@@ -1,0 +1,26 @@
+//outerbg
+//innerbg
+//navbar
+//primary btn
+//extra?
+
+$red: #9D261D;//darken(#CD5C5C, 15%);
+$zer: darken($red, 3%);//lighten(black, 5%);//lighten(#0F0F46,10%);
+$zer-alt: lighten(#0F0F46,10%);
+$one: lighten(#55A390, 10%);//rgba(46, 38, 33, 1); 
+$two: #BFB38E;//rgba(55, 60, 64, 1); 
+$thr: lighten(#F2E5BD, 7%);//rgba(190, 232, 224, 1);
+$fou: #594C25;//rgba(115, 50, 11, 1);
+$fiv: #26240C;//rgaa(255, 94, 0 , 1)
+$darkThr: darken($thr, 10%);
+
+$lightBg: image-url("dust.png");
+$darkBg: image-url("low_contrast_linen.png");
+
+$blue: #3887BE; 
+$lightBlue: #3BB2D0;
+
+$light-teal: #46a3b0;
+$dark-teal: #135760;
+
+// rgb(195, 193, 135);

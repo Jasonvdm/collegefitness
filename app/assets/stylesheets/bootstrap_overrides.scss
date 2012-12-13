@@ -1,0 +1,129 @@
+@import "colorscheme.scss";
+
+$white: #fff;
+$gray: darken(#eee, 60%);
+$grey: $gray;
+$grayDarker: darken($gray, 10%);
+
+$bodyBackground: white;//#CB935C;
+$innerBackground: $two;//lighten($bodyBackground, 25%);
+
+// Overrides for Grid System
+//----------------------------------------------------
+
+$gridColumns:			    24;
+$gridColumnWidth:		30px;
+$gridGutterWidth:		12px;
+
+$gridColumnWidthLarge: $gridColumnWidth;
+$gridGutterWidthLarge: $gridGutterWidth;
+$gridColumnWidthTablet: $gridColumnWidth;
+$gridGutterWidthTablet: $gridGutterWidth;
+
+
+// Links
+// -------------------------
+$linkColor:             $blue;
+$linkColorHover:        $lightBlue;
+
+// Navbar
+// -------------------------
+$navbarHeight:                    40px;
+$navbarBackground:                $zer;//$dark;//darken($two,10%);//$dark;//$darkestBrown;
+$navbarBackgroundHighlight:       $zer;//lighten($darkestBrown, 0%);
+$navbarText:                      $white;
+$navbarLinkColor:                 $white;
+$navbarLinkColorHover:            $white;
+$navbarLinkColorActive:           $navbarLinkColorHover;
+$navbarLinkBackgroundHover:       darken($zer, 5%);//transparent;
+$navbarLinkBackgroundActive:      $navbarBackground;
+
+$navbarSearchBackground:          lighten($navbarBackground, 25%);
+$navbarSearchBackgroundFocus:     $white;
+$navbarSearchBorder:              darken($navbarSearchBackground, 30%);
+$navbarSearchPlaceholderColor:    #ccc;
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white;
+$dropdownBorder:                rgba(0,0,0,.2);
+$dropdownLinkColor:             $zer;
+$dropdownLinkColorHover:        $white;
+$dropdownLinkBackgroundHover:   $zer; //TODO thr or two?
+
+// Buttons
+// -------------------------
+$btnBackground:                     $white;
+$btnBackgroundHighlight:            darken($white, 10%);
+$btnBorder:                         darken($white, 20%);
+
+$btnPrimaryBackground:              $red;
+$btnPrimaryBackgroundHighlight:     darken($btnPrimaryBackground, 5%);
+
+$btnSecondaryBackground:            $dark-teal;
+$btnSecondaryBackgroundHighlight:   darken($dark-teal, 5%);
+
+$btnInfoBackground:                 $light-teal;
+$btnInfoBackgroundHighlight:        darken($light-teal, 5%);
+
+$btnSuccessBackground:              #62c462;
+$btnSuccessBackgroundHighlight:     #51a351;
+
+$btnWarningBackground:              adjust-hue(darken(#F89406, 5%), -10%);
+$btnWarningBackgroundHighlight:     darken($btnWarningBackground, 5%);
+
+$btnDangerBackground:               #ee5f5b;
+$btnDangerBackgroundHighlight:      #bd362f;
+
+$btnInverseBackground:              $gray;
+$btnInverseBackgroundHighlight:     $grayDarker;
+
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853;
+$warningBackground:       #fcf8e3;
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
+
+$errorText:               #A53634;
+$errorBackground:         #DECACA;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
+
+$successText:             #327433;
+$successBackground:       #CBDCC4;
+$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
+
+$infoText:                #267399;
+$infoBackground:          #C5D9E3;
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
+
+
+html {
+  .container {
+    width: initial;
+    max-width: $gridColumns * ($gridColumnWidth + $gridGutterWidth) - $gridGutterWidth;
+  }
+ @media (max-width: 767px) {
+    body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar-fixed-top {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  @media (max-width: 979px) {
+    #content {
+      margin-top: initial;
+      padding-top: initial;
+    }
+    .row >, .container > {
+        .square, [class*="span"] {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+      }
+    }
+    .row { margin-left: initial; }
+  }
+}
