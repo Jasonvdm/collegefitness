@@ -17,15 +17,18 @@
 @import "bootstrap";
 @import "home.css.scss";
 @import "fonts";
+@import "http://roboto-webfont.googlecode.com/svn/trunk/roboto.all.css";
 
 * {
-  font: 18px/20px 'signikalight', Arial, sans-serif;
+  font: 18px/20px 'roboto';
+  font-weight: 100;
+  font-style: normal;
   @include box-sizing(border-box);
 }
 
 
 a {
-
+  font-family: 'roboto';
 }
 
 #content {
@@ -66,8 +69,14 @@ a {
 }
 
 .navbar-fixed-top .navbar-inner {
+	border: none;
   color: white;
   
+  a {
+    font-family: 'roboto';
+    font-weight: 100;
+    font-style: normal;
+  }
 
   a.brand {
     font-size: 25px;
