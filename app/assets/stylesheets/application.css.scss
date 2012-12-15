@@ -35,7 +35,6 @@ a {
   margin-top: 50px;
   min-height: 760px;
   width: 100%;
-  background-image: $lightBg;
   padding-top: 15px;
   padding-bottom: 35px;
   //@include border-radius(0 0px 35px 35px);
@@ -94,4 +93,50 @@ a {
     margin: 0 auto;
       display: block;
   }
+}
+
+
+.carousel div.img {
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 783px;
+  width: 100%;
+
+  .carousel-caption {
+    background-color: rgba(100, 100, 100, 0.50);
+    padding: 25px;
+    position: absolute;
+    left: 60%;
+    top: 30%;
+    /* TODO Try l:10, t:15 */
+    color: white;
+    max-width: 400px;
+    height: 190px;
+
+    @media (max-width: 979px) {
+      & {
+        margin: 0 auto;
+        top: 250px;
+        left: 0%;
+      }
+    }
+
+    h1 {
+      text-shadow: 2px 2px 0px black;
+      font-size: 34px;
+      line-height: 35px;
+      font-family: 'signikalight';
+    }
+
+    hr { border-color: white; margin-top: 7px;}
+
+    .caption-text {
+      font-size: 18px;
+      max-width: 70%;
+      text-shadow: 1px 1px 0px black;
+      line-height: 22px;
+    }
+  }
+
 }
