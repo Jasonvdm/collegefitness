@@ -22,6 +22,9 @@ end
 
 gem 'jquery-rails'
 
+# https://github.com/plataformatec/simple_form/
+gem 'simple_form'
+
 # https://github.com/thomas-mcdonald/bootstrap-sass/
 gem 'bootstrap-sass', '~> 2.2.1.1'
 

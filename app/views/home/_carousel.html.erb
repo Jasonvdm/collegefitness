@@ -4,7 +4,9 @@
     <div class="active item">
       <div class="img" style="background-image: url('/assets/covergym.jpg');">
         <div class="carousel-caption"> 
-          
+          <%= simple_form_for @user do |f| %>
+          <%= f.input :name, label: "asda" %>
+          <% end %>
           <hr />
           <div class="caption">
             <div class="caption-text pull-left">
