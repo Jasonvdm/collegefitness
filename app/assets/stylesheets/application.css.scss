@@ -17,7 +17,7 @@
 @import "bootstrap";
 @import "home.css.scss";
 @import "fonts";
-@import "http://roboto-webfont.googlecode.com/svn/trunk/roboto.all.css";
+
 
 * {
   font: 18px/20px 'roboto';
@@ -104,15 +104,16 @@ a {
   width: 100%;
 
   .carousel-caption {
-    background-color: rgba(100, 100, 100, 0.50);
+    background-color: rgba(10, 108, 135, 0.70);
     padding: 25px;
     position: absolute;
     left: 60%;
     top: 30%;
     /* TODO Try l:10, t:15 */
     color: white;
-    max-width: 400px;
-    height: 190px;
+    max-width: 450px;
+    display: inline-block;
+    height: 250px;
 
     @media (max-width: 979px) {
       & {
@@ -126,7 +127,9 @@ a {
       text-shadow: 2px 2px 0px black;
       font-size: 34px;
       line-height: 35px;
-      font-family: 'signikalight';
+      font-family: 'roboto';
+      font-weight: 100;
+      text-align: center;
     }
 
     hr { border-color: white; margin-top: 7px;}
@@ -138,5 +141,17 @@ a {
       line-height: 22px;
     }
   }
+}
 
+.signupformlabel {
+	float:left;
+	margin-right: 20px;
+
+	font-size: 19px;
+	font-family: 'roboto';
+	font-weight: 100;
+}
+
+.signupforminput{
+	margin-top: 5px;
 }

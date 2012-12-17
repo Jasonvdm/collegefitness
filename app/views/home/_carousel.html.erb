@@ -4,14 +4,35 @@
     <div class="active item">
       <div class="img" style="background-image: url('/assets/covergym.jpg');">
         <div class="carousel-caption"> 
-          <%= simple_form_for @user do |f| %>
-          <%= f.input :name, label: "asda" %>
+
+
+          <h1> Sign Up Now! </h1>
+          <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+          <table>
+            <tr>
+              <td width="45%"><%= f.hint "Email", class: "signupformlabel"  %></td>
+              <td width="45%"><%= f.input_field :email,  class: "signupforminput", :required => true, :autofocus => true %></td>
+            </tr>
+            <tr>
+              <td width="35%"><%= f.hint "Password", class: "signupformlabel"  %></td>
+              <td width="45%"><%= f.input_field :password,  class: "signupforminput", :required => true %></td>
+            </tr>
+            <tr>
+              <td width="35%"><%= f.hint "Password again", class: "signupformlabel"  %></td>
+              <td width="45%"><%= f.input_field :password_confirmation, class: "signupforminput", :required => true %></td>
+            </tr>
+            
+          </table>
+
+          <div style="text-align:center">
+            <%= f.submit "Submit", :class => "btn btn-primary", :style => "width:150px; margin-top:10px" %>
+          </div>
           <% end %>
-          <hr />
           <div class="caption">
             <div class="caption-text pull-left">
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -20,5 +41,7 @@
   <!-- Carousel nav 
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-  -->
+-->
 </div>
+
+

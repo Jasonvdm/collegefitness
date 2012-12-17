@@ -28,6 +28,9 @@ gem 'simple_form'
 # https://github.com/thomas-mcdonald/bootstrap-sass/
 gem 'bootstrap-sass', '~> 2.2.1.1'
 
+#https://github.com/plataformatec/devise
+gem 'devise'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
