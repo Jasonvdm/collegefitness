@@ -5,22 +5,22 @@
 
 		<div class="square">
 			<div class="row">
-				<div class="span3">
-					<h2> Name: </h2>
+				<div class="span4">
+					<div> Name: </div>
 				</div>
-				<div class="span5">
+				<div class="span4">
 					<div><%= @user.name %></div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="span3">
-					<h2> Number: </h2>
+				<div class="span4">
+					<div> Number: </div>
 				</div>
-				<div class="span5">
+				<div class="span4">
 					<div><%= @user.number %></div>
 				</div>
 			</div>
-			<%= link_to 'Edit', edit_user_path(@user) %> |
+			<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary btn-edit"%> |
 			<%= link_to 'Back', users_path %>
 		</div>
 	</div>

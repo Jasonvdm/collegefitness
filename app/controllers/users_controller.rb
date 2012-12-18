@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-
+  before_filter :user_signed_in?
 
   # GET /users
   # GET /users.json
