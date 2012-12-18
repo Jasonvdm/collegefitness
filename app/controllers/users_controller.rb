@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+
+
   # GET /users
   # GET /users.json
   def index
@@ -21,6 +24,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def signed_in
+    redirect_to user_path(current_user)  
+  end
+
   # GET /users/new
   # GET /users/new.json
   def new
@@ -30,6 +37,7 @@ class UsersController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @user }
     end
+    redirect_to user_path(@user)
   end
 
   # GET /users/1/edit
@@ -46,11 +54,13 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
+        redirect_to user_path(@user)
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PUT /users/1

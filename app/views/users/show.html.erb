@@ -1,15 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	<div class="span10 offset7">
+		<div class="square">
+			<p>
+				<b>Name:</b>
+				<%= @user.name %>
+			</p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Number:</b>
-  <%= @user.number %>
-</p>
+			<p>
+				<b>Number:</b>
+				<%= @user.number %>
+			</p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+			<%= link_to 'Edit', edit_user_path(@user) %> |
+			<%= link_to 'Back', users_path %>
+		</div>
+	</div>
+</div>

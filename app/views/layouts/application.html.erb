@@ -8,6 +8,7 @@
 	<%= javascript_include_tag "application" %>`
 </head>
 <body>
+
 	<%= render partial: "layouts/navbar" %>
 	<div id="content">
 		<% home_index = params[:controller] == "home" && params["action"] == "index" %>
@@ -26,7 +27,7 @@
           </div>
         </div>
       <% end %>
-		<div class="<%= "container" unless home_index %>">
+		<div class="<%= "container" unless home_index  %>">
 			<%= yield %>
 		</div>
 	</div>

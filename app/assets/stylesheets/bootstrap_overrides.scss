@@ -29,6 +29,7 @@ $linkColorHover:        $lightBlue;
 // Navbar
 // -------------------------
 $navbarBrandColor:                $white;
+
 $navbarHeight:                    30px;
 $navbarBackground:                $zer;//$dark;//darken($two,10%);//$dark;//$darkestBrown;
 $navbarBackgroundHighlight:       $zer;//lighten($darkestBrown, 0%);
@@ -38,7 +39,7 @@ $navbarLinkColorHover:            $white;
 $navbarLinkColorActive:           $navbarLinkColorHover;
 $navbarLinkBackgroundHover:       darken($zer, 5%);//transparent;
 $navbarLinkBackgroundActive:      $navbarBackground;
-
+$navbarBrandBackgroundHighlight:  $zer;
 $navbarSearchBackground:          lighten($navbarBackground, 25%);
 $navbarSearchBackgroundFocus:     $white;
 $navbarSearchBorder:              darken($navbarSearchBackground, 30%);

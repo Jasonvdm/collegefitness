@@ -32,9 +32,10 @@ a {
 }
 
 #content {
-  margin-top: 50px;
+  margin-top: 30px;
   min-height: 760px;
   width: 100%;
+  background: white;
   padding-top: 15px;
   padding-bottom: 35px;
   //@include border-radius(0 0px 35px 35px);
@@ -56,7 +57,7 @@ a {
        margin: 0 auto;
        width: 940px;
        .alert {
-         margin-bottom: 0;
+         margin-bottom: 10px;
        }
      }
    }
@@ -140,6 +141,22 @@ a {
       text-shadow: 1px 1px 0px black;
       line-height: 22px;
     }
+  }
+}
+
+.square {
+  color: white;
+  opacity: 0.8;
+  margin-top: 25%;
+  background-color: $zer;
+  padding: 18px  25px;
+  //@include border-radius(7px);
+  @include box-shadow(black 0px 2px 17px -1px);
+  > img.profile {
+    margin: 12px initial;
+    margin-top: -8px;
+  }
+  div {
   }
 }
 

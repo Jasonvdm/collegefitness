@@ -8,6 +8,13 @@
           <li><%= link_to "About Us" %></li>
         </ul>
       </div>
+      <div class="btn-group pull-right">
+        <% if user_signed_in? %>
+        <%= render partial: "/layouts/navbar_signed_in" %>
+        <% else %>
+        <%= render partial: "/layouts/navbar_signed_out" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
