@@ -1,30 +1,8 @@
-<h1>Listing workouts</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Difficulty</th>
-    <th>Equipment</th>
-    <th>Equipment Needed</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Listing Workouts</h1>
 
 <% @workouts.each do |workout| %>
-  <tr>
-    <td><%= workout.name %></td>
-    <td><%= workout.description %></td>
-    <td><%= workout.difficulty %></td>
-    <td><%= workout.equipment %></td>
-    <td><%= workout.equipmentneeded %></td>
-    <td><%= link_to 'Show', workout %></td>
-    <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-    <td><%= link_to 'Destroy', workout, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<%= render partial: "workout_card", locals: {workout:workout} %>
 <% end %>
-</table>
 
 <br />
 
