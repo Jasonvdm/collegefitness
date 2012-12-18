@@ -48,10 +48,13 @@ h3, h4 {
 	}
 }
 
+.text-center, .t-center {
+	text-align: center;
+}
 .header {
-  font: 53px/84px "roboto";
-  font-weight: 100;
-  text-align: center;
+	font: 53px/84px "roboto";
+	font-weight: 100;
+	text-align: center;
   // font-size: 30px;
   // @include gradient-horizontal(white, $one);
   // width: 300px;
@@ -61,13 +64,19 @@ h3, h4 {
 
 a {
 	font-family: 'roboto';
+	color:white;
+	&:hover {
+		color: white;
+	}
+	&:visited {
+		color: white;
+	}
 }
 
 #content {
 	margin-top: 30px;
 	min-height: 760px;
 	width: 100%;
-	background: white;
 	padding-top: 15px;
 	padding-bottom: 35px;
   //@include border-radius(0 0px 35px 35px);
@@ -93,6 +102,16 @@ a {
   		}
   	}
   }
+  a {
+	font-family: 'roboto';
+	color:white;
+	&:hover {
+		color: white;
+	}
+	&:visited {
+		color: white;
+	}
+}
 }
 
 .navbar div.btn-group {
@@ -126,6 +145,10 @@ a {
 		margin: 0 auto;
 		display: block;
 	}
+}
+
+body {
+  background-image: $lightBg;
 }
 
 
@@ -178,8 +201,7 @@ a {
 
 .square {
 	color: white;
-	 margin-top: 15px;
-	opacity: 0.8;
+	margin-top: 15px;
 	background-color: $zer;
 	padding: 18px  25px;
   //@include border-radius(7px);

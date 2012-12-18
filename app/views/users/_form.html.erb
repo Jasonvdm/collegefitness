@@ -1,12 +1,17 @@
-<%= simple_form_for(@user) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :number %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+<div class="header"> Edit My Info </div>
+<div class="row">
+	<div class="span10 offset7">
+		<div class="square t-center">
+			<%= simple_form_for(@user) do |f| %>
+			<%= f.error_notification %>
+			<div class="form-inputs">
+				<%= f.input :name %>
+				<%= f.input :number %>
+			</div>
+			<div>
+				<%= f.submit "Submit", :class => "btn btn-primary", :style => "width:150px; margin-top:10px" %>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
