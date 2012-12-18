@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  difficulty: MyString
+  equipment: false
+  equipmentneeded: MyString
+
+two:
+  name: MyString
+  description: MyText
+  difficulty: MyString
+  equipment: false
+  equipmentneeded: MyString

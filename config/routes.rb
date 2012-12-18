@@ -1,5 +1,7 @@
 Collegefitness::Application.routes.draw do
 
+  resources :workouts
+
   devise_for :users
 
   resources :users
