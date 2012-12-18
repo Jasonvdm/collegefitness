@@ -31,6 +31,9 @@ gem 'bootstrap-sass', '~> 2.2.1.1'
 #https://github.com/plataformatec/devise
 gem 'devise'
 
+#https://github.com/thoughtbot/paperclip.git
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
