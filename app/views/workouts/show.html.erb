@@ -1,30 +1,35 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @workout.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @workout.description %>
-</p>
-
-<p>
-  <b>Difficulty:</b>
-  <%= @workout.difficulty %>
-</p>
-
-<p>
-  <b>Equipment:</b>
-  <%= @workout.equipment %>
-</p>
-
-<p>
-  <b>Equipmentneeded:</b>
-  <%= @workout.equipmentneeded %>
-</p>
-
+<div class="header"><%= @workout.name %></div>
+<div text/align="center"><%= image_tag @workout.avatar.url(:medium) %></div>
+<div class="row">
+	<div class="span10 offset7">
+		<div class="square">
+			<div class="row">
+				<div class="span3">
+					<h2> Gear: </h2>
+				</div>
+				<div class="span5">
+					<div><%= @workout.equipmentneeded %></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span3">
+					<h2> Difficulty: </h2>
+				</div>
+				<div class="span5">
+					<div><%= @workout.difficulty %></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span3">
+					<h2> Description: </h2>
+				</div>
+				<div class="span5">
+					<div><%= @workout.description %></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
