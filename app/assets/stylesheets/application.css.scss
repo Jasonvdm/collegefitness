@@ -10,151 +10,183 @@
  *
  *= require_self
  *= require_tree .
-*/
-@import "colorscheme.scss";
-@import "bootstrap-responsive";
-@import "bootstrap_overrides";
-@import "bootstrap";
-@import "home.css.scss";
-@import "fonts";
+ */
+ @import "colorscheme.scss";
+ @import "bootstrap-responsive";
+ @import "bootstrap_overrides";
+ @import "bootstrap";
+ @import "home.css.scss";
+ @import "fonts";
 
 
-* {
-  font: 18px/20px 'roboto';
+ * {
+ 	font: 18px/28px 'roboto';
+ 	font-weight: 100;
+ 	font-style: normal;
+ 	@include box-sizing(border-box);
+ }
+
+ h1, h2 {
+  // letter-spacing: 2px;
+  font: 21px/10px "roboto";
   font-weight: 100;
-  font-style: normal;
-  @include box-sizing(border-box);
+  &.big {
+  	font: 29px/38px "roboto";
+  	font-weight: 500;
+  }
+  &.form {
+  	padding-bottom: 10px;
+  }
 }
 
+h3, h4 {
+	font: 18px/27px "roboto";
+	font-weight: 100;
+	&.big {
+		font: 26px/28px "roboto";
+		font-weight: 500;
+	}
+}
+
+.header {
+  font: 53px/84px "roboto";
+  font-weight: 100;
+  text-align: center;
+  // font-size: 30px;
+  // @include gradient-horizontal(white, $one);
+  // width: 300px;
+  padding: 8px;
+  //@include box-shadow(2px 2px 2px 0 white);
+}
 
 a {
-  font-family: 'roboto';
+	font-family: 'roboto';
 }
 
 #content {
-  margin-top: 30px;
-  min-height: 760px;
-  width: 100%;
-  background: white;
-  padding-top: 15px;
-  padding-bottom: 35px;
+	margin-top: 30px;
+	min-height: 760px;
+	width: 100%;
+	background: white;
+	padding-top: 15px;
+	padding-bottom: 35px;
   //@include border-radius(0 0px 35px 35px);
-   > .container {
+  > .container {
 
-   }
+  }
 
-   > .alerts-container {
-     padding: 15px;
+  > .alerts-container {
+  	padding: 15px;
 
-     &.home-index {
-       z-index: 10;
-       position: absolute;
-       margin: 0 auto;
-       width: 100%;
-     }
+  	&.home-index {
+  		z-index: 10;
+  		position: absolute;
+  		margin: 0 auto;
+  		width: 100%;
+  	}
 
-     > .alerts {
-       margin: 0 auto;
-       width: 940px;
-       .alert {
-         margin-bottom: 10px;
-       }
-     }
-   }
+  	> .alerts {
+  		margin: 0 auto;
+  		width: 940px;
+  		.alert {
+  			margin-bottom: 10px;
+  		}
+  	}
+  }
 }
 
 .navbar div.btn-group {
-  display:inline-block;
-  padding: 0;
+	display:inline-block;
+	padding: 0;
 }
 
 .navbar-fixed-top .navbar-inner {
 	border: none;
-  color: white;
-  
-  a {
-    font-family: 'roboto';
-    font-weight: 100;
-    font-style: normal;
-  }
+	color: white;
 
-  a.brand {
-    font-size: 25px;
-    line-height: 30px;
-  }
+	a {
+		font-family: 'roboto';
+		font-weight: 100;
+		font-style: normal;
+	}
 
-  li > a, a {
-    font-size: 16px;
-    line-height: inital;
-    line-height: 30px;
-  }
+	a.brand {
+		font-size: 25px;
+		line-height: 30px;
+	}
 
-  #main-btn-group {
-    width: 301px;
-    margin: 0 auto;
-      display: block;
-  }
+	li > a, a {
+		font-size: 16px;
+		line-height: inital;
+		line-height: 30px;
+	}
+
+	#main-btn-group {
+		width: 301px;
+		margin: 0 auto;
+		display: block;
+	}
 }
 
 
 .carousel div.img {
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 783px;
-  width: 100%;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 783px;
+	width: 100%;
 
-  .carousel-caption {
-    background-color: rgba(10, 108, 135, 0.70);
-    padding: 25px;
-    position: absolute;
-    left: 60%;
-    top: 30%;
-    /* TODO Try l:10, t:15 */
-    color: white;
-    max-width: 450px;
-    display: inline-block;
-    height: 250px;
+	.carousel-caption {
+		background-color: rgba(10, 108, 135, 0.70);
+		padding: 25px;
+		position: absolute;
+		left: 60%;
+		top: 30%;
+		/* TODO Try l:10, t:15 */
+		color: white;
+		max-width: 450px;
+		display: inline-block;
+		height: 250px;
 
-    @media (max-width: 979px) {
-      & {
-        margin: 0 auto;
-        top: 250px;
-        left: 0%;
-      }
-    }
+		@media (max-width: 979px) {
+			& {
+				margin: 0 auto;
+				top: 250px;
+				left: 0%;
+			}
+		}
 
-    h1 {
-      text-shadow: 2px 2px 0px black;
-      font-size: 34px;
-      line-height: 35px;
-      font-family: 'roboto';
-      font-weight: 100;
-      text-align: center;
-    }
+		h1 {
+			text-shadow: 2px 2px 0px black;
+			font-size: 34px;
+			line-height: 35px;
+			font-family: 'roboto';
+			font-weight: 100;
+			text-align: center;
+		}
 
-    hr { border-color: white; margin-top: 7px;}
+		hr { border-color: white; margin-top: 7px;}
 
-    .caption-text {
-      font-size: 18px;
-      max-width: 70%;
-      text-shadow: 1px 1px 0px black;
-      line-height: 22px;
-    }
-  }
+		.caption-text {
+			font-size: 18px;
+			max-width: 70%;
+			text-shadow: 1px 1px 0px black;
+			line-height: 22px;
+		}
+	}
 }
 
 .square {
-  color: white;
-  opacity: 0.8;
-  margin-top: 25%;
-  background-color: $zer;
-  padding: 18px  25px;
+	color: white;
+	 margin-top: 15px;
+	opacity: 0.8;
+	background-color: $zer;
+	padding: 18px  25px;
   //@include border-radius(7px);
   @include box-shadow(black 0px 2px 17px -1px);
   > img.profile {
-    margin: 12px initial;
-    margin-top: -8px;
+  	margin: 12px initial;
+  	margin-top: -8px;
   }
   div {
   }

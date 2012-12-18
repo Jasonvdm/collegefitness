@@ -1,17 +1,25 @@
+
+<div class="header"> My Info </div>
 <div class="row">
 	<div class="span10 offset7">
+
 		<div class="square">
-			<p>
-				<b>Name:</b>
-				<%= @user.name %>
-			</p>
-
-			<p>
-				<b>Number:</b>
-				<%= @user.number %>
-			</p>
-
-
+			<div class="row">
+				<div class="span3">
+					<h2> Name: </h2>
+				</div>
+				<div class="span5">
+					<div><%= @user.name %></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span3">
+					<h2> Number: </h2>
+				</div>
+				<div class="span5">
+					<div><%= @user.number %></div>
+				</div>
+			</div>
 			<%= link_to 'Edit', edit_user_path(@user) %> |
 			<%= link_to 'Back', users_path %>
 		</div>
