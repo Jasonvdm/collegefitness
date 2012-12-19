@@ -48,6 +48,8 @@ h3, h4 {
 	}
 }
 
+a.btn:visited { color: #fff; }
+
 .text-center, .t-center {
 	text-align: center;
 }
@@ -102,16 +104,7 @@ a {
   		}
   	}
   }
-  a {
-	font-family: 'roboto';
-	color:white;
-	&:hover {
-		color: white;
-	}
-	&:visited {
-		color: white;
-	}
-}
+
 }
 
 .navbar div.btn-group {
@@ -148,9 +141,25 @@ a {
 }
 
 body {
-  background-image: $lightBg;
+	background-image: $lightBg;
 }
 
+.card {
+  &.student { 
+    height: 460px;
+    .ribbon { width: 284px; }
+  }
+  &.job {
+    height: 240px;
+  }
+  &.link { color: black; }
+  &.link:hover { 
+    background-color: lighten($lightBlue, 45%);
+  }
+  * {
+    word-wrap: break-word;
+  }
+}
 
 .carousel div.img {
 	background-position: 50% 0;

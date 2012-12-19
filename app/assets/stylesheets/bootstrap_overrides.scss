@@ -23,7 +23,7 @@ $gridGutterWidthTablet: $gridGutterWidth;
 
 // Links
 // -------------------------
-$linkColor:             $blue;
+$linkColor:             $white;
 $linkColorHover:        $lightBlue;
 
 // Navbar
@@ -43,7 +43,7 @@ $navbarBrandBackgroundHighlight:  $zer;
 $navbarSearchBackground:          lighten($navbarBackground, 25%);
 $navbarSearchBackgroundFocus:     $white;
 $navbarSearchBorder:              darken($navbarSearchBackground, 30%);
-$navbarSearchPlaceholderColor:    #ccc;
+$navbarSearchPlaceholderColor:    $white;
 
 // Dropdowns
 // -------------------------
