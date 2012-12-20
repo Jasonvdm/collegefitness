@@ -6,11 +6,15 @@
 			<%= f.error_notification %>
 			<div class="form-inputs">
 				<%= f.input :name %>
+				<%= f.input :email %>
+				<%= f.input :email_pref, :collection => ["Email me", "Text me"], :as=> :radio_buttons, :hint => "Do you prefer to have the workouts sent to you via email or text? We highly recommend selecting text." %>
 				<%= f.input :number %>
+				<%= f.input :carrier, :collection => [ "Verizon", "AT&T", "T-Mobile", "Sprint", "Virgin Mobile", "US Cellular"],
+        input_html: { class: "chosen" } %>
 			</div>
 			<div>
 				<%= f.submit "Submit", :class => "btn btn-primary", :style => "width:150px; margin-top:10px" %>
-				
+
 			</div>
 			<% end %>
 		</div>
