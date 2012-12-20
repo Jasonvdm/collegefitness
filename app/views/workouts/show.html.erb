@@ -1,14 +1,22 @@
 <div class="header"><%= @workout.name %></div>
-<div text/align="center"><%= image_tag @workout.avatar.url(:medium) %></div>
 <div class="row">
 	<div class="span10 offset7">
-		<div class="square">
+		<div text/align="center"><%= image_tag @workout.avatar.url(:medium), style: "width:100%" %></div>
+	</div>
+</div>
+<div class="row">
+	<div class="span10 offset7">
+		<div class="square" style="margin-top:0px">
 			<div class="row">
 				<div class="span3">
 					<h2> Gear: </h2>
 				</div>
 				<div class="span5">
+					<% if @workout.equipment %>
 					<div><%= @workout.equipmentneeded %></div>
+					<% else %>
+					<div>None required </div>
+					<% end %>
 				</div>
 			</div>
 			<div class="row">

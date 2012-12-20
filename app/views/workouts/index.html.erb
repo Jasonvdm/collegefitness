@@ -1,9 +1,14 @@
-<h1>Listing Workouts</h1>
+<div class="row">
+	<div class="span24">
+		<h1 style="float:left; margin-right: 25px;">Listing Workouts</h1>
 
+		<%= link_to 'New Workout', new_workout_path, class: "btn btn-primary", style: "float:left"%>
+	</div>
+</div>
 <% @workouts.each do |workout| %>
 <%= render partial: "workout_card", locals: {workout:workout} %>
 <% end %>
 
 <br />
 
-<%= link_to 'New Workout', new_workout_path %>
+

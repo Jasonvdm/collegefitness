@@ -1,11 +1,8 @@
 <a href="<%= workout_path(workout) %>">
-	<div class="square span7 workout card">
-		<div class="ribbon">
-			<div class="ribbon-content">
-				<h1 class="t-center"><%= workout.name %></h1>
-			</div>
-		</div>
-		<%= image_tag workout.avatar.url(:medium), :class => "workout" %>
+	<div class="square span7 card workout">
+		<h1 class="t-center"><%= workout.name %></h1>
+
+		<%= image_tag workout.avatar.url(:medium), :class => "image" %>
 		<div>Skill level: <%= workout.difficulty %></div>
 		<div>Gear: <%= workout.equipmentneeded %></div>
 	</div>

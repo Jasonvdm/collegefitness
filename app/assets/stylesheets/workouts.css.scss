@@ -2,7 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.workout { 
-	margin-top: 20px; 
-	margin-bottom: 20px; 
+
+
+.card {
+	&.workout { 
+		height: 320px;
+		.ribbon { width: 284px; }
+	}
+
+	.image{
+		margin-top: 15px; 
+		margin-bottom: 20px; 
+	}
 }

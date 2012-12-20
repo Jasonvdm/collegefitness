@@ -144,22 +144,6 @@ body {
 	background-image: $lightBg;
 }
 
-.card {
-  &.student { 
-    height: 460px;
-    .ribbon { width: 284px; }
-  }
-  &.job {
-    height: 240px;
-  }
-  &.link { color: black; }
-  &.link:hover { 
-    background-color: lighten($lightBlue, 45%);
-  }
-  * {
-    word-wrap: break-word;
-  }
-}
 
 .carousel div.img {
 	background-position: 50% 0;
