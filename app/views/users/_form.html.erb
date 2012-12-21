@@ -12,12 +12,10 @@
 					<%= f.input :contact_pref, :collection => ["Text me", "Email me"], :as=> :radio_buttons, :label => "", wrapper_html: {class: "span4 offset2"}, :checked => "Text me" %>
 				</div>
 				<%= f.input :number, wrapper_html: {id: "number_pref"} %>
-				<%= f.input :carrier, :collection => [ "Verizon", "AT&T", "T-Mobile", "Sprint", "Virgin Mobile", "US Cellular"], input_html: { class: "chosen" }, wrapper_html: {id: "carrier_selection"} %>
-
 			</div>
 			<div>
 				<%= f.submit "Submit", :class => "btn btn-primary", :style => "width:150px; margin-top:10px" %>
-				
+
 			</div>
 			<% end %>
 		</div>

@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20121220222652) do
 
   create_table "users", :force => true do |t|
@@ -33,6 +34,12 @@ ActiveRecord::Schema.define(:version => 20121220222652) do
   end
 
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+=======
+ActiveRecord::Schema.define(:version => 20121220215015) do
+
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'email_pref' for column 'boolean'
+>>>>>>> b79727ed13edffaf6a5659ea60f85e87600815c4
 
   create_table "workouts", :force => true do |t|
     t.string   "name"
