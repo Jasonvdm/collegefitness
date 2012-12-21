@@ -6,7 +6,14 @@
 			<%= f.error_notification %>
 			<div class="form-inputs">
 				<%= f.input :name %>
-				<%= f.input :number %>
+				<%= f.input :email, wrapper_html: {id: "email_pref"} %>
+				<div class="row" style="margin:auto">
+					<%= f.hint "Do you prefer to have the workouts sent to you via email or text? We highly recommend selecting text.", class: "form-edit" %>
+					<%= f.input :contact_pref, :collection => ["Text me", "Email me"], :as=> :radio_buttons, :label => "", wrapper_html: {class: "span4 offset2"}, :checked => "Text me" %>
+				</div>
+				<%= f.input :number, wrapper_html: {id: "number_pref"} %>
+				<%= f.input :carrier, :collection => [ "Verizon", "AT&T", "T-Mobile", "Sprint", "Virgin Mobile", "US Cellular"], input_html: { class: "chosen" }, wrapper_html: {id: "carrier_selection"} %>
+
 			</div>
 			<div>
 				<%= f.submit "Submit", :class => "btn btn-primary", :style => "width:150px; margin-top:10px" %>

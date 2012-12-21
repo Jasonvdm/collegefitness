@@ -1,7 +1,7 @@
 
 <div class="header"> My Info </div>
 <div class="row">
-	<div class="span10 offset7">
+	<div class="span12 offset6">
 
 		<div class="square">
 			<div class="row">
@@ -14,14 +14,33 @@
 			</div>
 			<div class="row">
 				<div class="span4">
+					<div> Email: </div>
+				</div>
+				<div class="span4">
+					<div><%= @user.email %></div>
+				</div>
+			</div>
+			<% if @user.number != "" %>
+			<div class="row">
+				<div class="span4">
 					<div> Number: </div>
 				</div>
 				<div class="span4">
 					<div><%= @user.number %></div>
 				</div>
 			</div>
-			<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary btn-edit"%> |
-			<%= link_to 'Back', users_path %>
+			<div class="row">
+				<div class="span4">
+					<div> Carrier: </div>
+				</div>
+				<div class="span4">
+					<div><%= @user.carrier %></div>
+				</div>
+			</div>
+			<% end %>
+			<div class="t-center">
+				<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary btn-edit"%> 
+			</div>
 		</div>
 	</div>
 </div>
