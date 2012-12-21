@@ -1,8 +1,9 @@
 <div class="row">
 	<div class="span24">
 		<h1 style="float:left; margin-right: 25px;">Listing Workouts</h1>
-
+		<% if current_user.is_admin %>
 		<%= link_to 'New Workout', new_workout_path, class: "btn btn-primary", style: "float:left"%>
+		<% end %>
 	</div>
 </div>
 <% @workouts.each do |workout| %>

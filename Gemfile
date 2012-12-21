@@ -27,6 +27,9 @@ end
 
 gem 'jquery-rails'
 
+#Amazon storage
+gem 'aws-sdk'
+
 # https://github.com/plataformatec/simple_form/
 gem 'simple_form'
 
