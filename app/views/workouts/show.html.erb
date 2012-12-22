@@ -13,9 +13,9 @@
 				</div>
 				<div class="span5">	
 					<% if @workout.equipment %>
-						<div><%= @workout.equipmentneeded %></div>
+					<div><%= @workout.equipmentneeded %></div>
 					<% else %>
-						<div>None required </div>
+					<div>None required </div>
 					<% end %>
 				</div>
 			</div>
@@ -35,9 +35,12 @@
 					<div><%= @workout.description %></div>
 				</div>
 			</div>
+			<% if current_user.is_admin %>
+			<div class="t-center">
+				<%= link_to 'Edit', edit_workout_path(@workout), class: "btn btn-primary btn-edit" %> 
+			</div>
+			<% end %>
 		</div>
 	</div>
 </div>
 
-<%= link_to 'Edit', edit_workout_path(@workout) %> |
-<%= link_to 'Back', workouts_path %>

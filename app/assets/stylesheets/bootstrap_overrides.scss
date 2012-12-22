@@ -100,7 +100,7 @@ $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
 
 
 html {
-  .container {
+  .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
     width: initial;
     max-width: $gridColumns * ($gridColumnWidth + $gridGutterWidth) - $gridGutterWidth;
   }
@@ -116,7 +116,7 @@ html {
   }
   @media (max-width: 979px) {
     #content {
-      margin-top: initial;
+      margin-top: 15px;
       padding-top: initial;
     }
     .row >, .container > {
