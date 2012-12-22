@@ -25,6 +25,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+#https://github.com/javan/whenever
+gem 'whenever', :require => false
+
 gem 'jquery-rails'
 
 #Amazon storage

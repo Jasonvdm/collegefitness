@@ -49,6 +49,7 @@ GEM
     bootstrap-sass (2.2.1.1)
       sass (~> 3.2)
     builder (3.0.4)
+    chronic (0.9.0)
     cocaine (0.4.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -136,6 +137,9 @@ GEM
     uuidtools (2.1.2)
     warden (1.2.1)
       rack (>= 1.0)
+    whenever (0.8.1)
+      activesupport (>= 2.3.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -153,3 +157,4 @@ DEPENDENCIES
   simple_form
   sqlite3
   uglifier (>= 1.0.3)
+  whenever
