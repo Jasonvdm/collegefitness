@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :name, :number, :carrier, :contact_pref, :is_admin
+  attr_accessible :has_equipment, :equipment_owned
 
 
   def make_admin
