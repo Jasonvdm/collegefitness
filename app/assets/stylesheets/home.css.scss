@@ -1,3 +1,51 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carousel div.img {
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 783px;
+	width: 100%;
+
+	.carousel-caption {
+		background-color: rgba(10, 108, 135, 0.70);
+		padding: 25px;
+		position: absolute;
+		left: 60%;
+		top: 30%;
+		/* TODO Try l:10, t:15 */
+		color: white;
+		max-width: 450px;
+		display: inline-block;
+		height: 250px;
+
+		@media (max-width: 979px) {
+			& {
+				margin: 0 auto;
+				top: 250px;
+				left: 0%;
+				max-width: 250px;
+			}
+		}
+
+		h1 {
+			text-shadow: 2px 2px 0px black;
+			font-size: 34px;
+			line-height: 35px;
+			font-family: 'roboto';
+			font-weight: 100;
+			text-align: center;
+		}
+
+		hr { border-color: white; margin-top: 7px;}
+
+		.caption-text {
+			font-size: 18px;
+			max-width: 70%;
+			text-shadow: 1px 1px 0px black;
+			line-height: 22px;
+		}
+	}
+}

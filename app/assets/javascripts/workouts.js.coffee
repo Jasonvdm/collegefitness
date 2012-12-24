@@ -9,6 +9,10 @@ Workouts.initialize = ->
   init_edit_page()
 
 init_edit_page = ->
+  checked = $('#equipment_needed').attr("checked") 
+  if checked
+    #console.log("HOURLY")
+    $('#equipment_list').show()
   #console.log('init_edit_page')
   $("#equipment_needed").on "change", ->
     #console.log(hourly)
@@ -17,7 +21,7 @@ init_edit_page = ->
       #console.log("HOURLY")
       $('#equipment_list').show()
     else
-	  $('#equipment_list').hide()
+	    $('#equipment_list').hide()
   $('#equipment_needed').trigger('change')
 
 true

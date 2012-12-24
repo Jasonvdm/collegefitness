@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-	edit_user_path(current_user)
+	  if current_user.last_sign_in_at == nil
+      edit_user_path(current_user)
+    else
+      workouts_path
+    end
   end
 end

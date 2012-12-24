@@ -1,11 +1,10 @@
-<div id="myCarousel" class="carousel slide" style="margin-top: -85px; height: 600px;">
+<div id="myCarousel" class="carousel slide" style="margin-top: -15px; height: 600px;">
   <!-- Carousel items -->
   <div class="carousel-inner">
     <div class="active item">
       <div class="img" style="background-image: url('/assets/covergym.jpg');">
+        <% if !current_user %>
         <div class="carousel-caption"> 
-
-
           <h1> Sign Up Now! </h1>
           <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
@@ -22,9 +21,7 @@
               <td width="35%"><%= f.hint "Password again", class: "signupformlabel"  %></td>
               <td width="45%"><%= f.input_field :password_confirmation, class: "signupforminput", :required => true %></td>
             </tr>
-            
           </table>
-
           <div style="text-align:center">
             <%= f.submit "Submit", :class => "btn btn-primary", :style => "width:150px; margin-top:10px" %>
           </div>
@@ -32,9 +29,9 @@
           <div class="caption">
             <div class="caption-text pull-left">
             </div>
-
           </div>
         </div>
+        <% end %>
       </div>
     </div>
   </div>

@@ -19,9 +19,11 @@
 
 # Learn more: http://github.com/javan/whenever
 
+
+
 set :output, "/var/log/cron.log"
 
 every 1.minutes do    
   puts "i'm the new job!"
-  rake "cron", :environment => :development
+  rake "cron"
 end

@@ -12,7 +12,7 @@
 	<div id="content">
 		<% home_index = params[:controller] == "home" && params["action"] == "index" %>
 		<% if flash[:error] || flash[:notice] || flash[:alert] %>
-        <div class="alerts-container<%= " home-index" if home_index %>">
+        <div class="alerts-container<%= " home-index" if home_index %>" style="<%= "margin-top:40px" if home_index %>">
           <div class="alerts">
             <% if flash[:error] %>
               <div class="alert alert-error"><%= flash[:error] %></div>
