@@ -17,7 +17,8 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-	  if current_user.last_sign_in_at == nil
+	  if current_user.sign_in_count == 1
+      ApplicationMailer.welcome_msg(current_user, "Welcome to CollegeStrong!", current_user.email).deliver
       edit_user_path(current_user)
     else
       workouts_path

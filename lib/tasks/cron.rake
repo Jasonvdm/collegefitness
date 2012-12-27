@@ -1,7 +1,6 @@
 task :cron => [:environment] do
   puts "Pulling new requests..."
-  ApplicationMailer.contact.deliver
-  ApplicationMailer.welcome_msg(User.first, "This is a test").deliver
+  ApplicationMailer.welcome_msg(User.last, "This is a test", User.last.email).deliver
   puts "Done."
 end
 

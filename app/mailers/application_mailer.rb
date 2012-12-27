@@ -8,7 +8,7 @@ class ApplicationMailer < ActionMailer::Base
   def welcome_msg(user, msg, to)
     @user = user
     @msg = msg
-    mail(to: "8655482427@vtext.com")
+    mail(to: to, subject: "")
   end
   
 end

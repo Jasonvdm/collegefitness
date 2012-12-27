@@ -66,7 +66,21 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
-    params[:user][:number_path] = "#{params[:user][:number]}" + "@vtext.com"
+    number = params[:user][:number]
+    carrier = params[:user][:carrier]
+    if carrier == "Verizon"
+      params[:user][:number_path] = "#{number}" + "@vtext.com"
+    elsif carrier == "AT&T"
+      params[:user][:number_path] = "#{number}" + "@txt.att.net"
+    elsif carrier == "T-Mobile"
+      params[:user][:number_path] = "#{number}" + "@tmomail.net"
+    elsif carrier == "Sprint"
+      params[:user][:number_path] = "#{number}" + "@messaging.sprintpcs.com"
+    elsif carrier == "Virgin Mobile"
+      params[:user][:number_path] = "#{number}" + "@vmobl.com"
+    elsif carrier == "US Cellular"
+      params[:user][:number_path] = "#{number}" + "@email.uscc.net"
+    end
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
