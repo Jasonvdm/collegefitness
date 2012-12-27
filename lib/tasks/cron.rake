@@ -1,6 +1,10 @@
 task :cron => [:environment] do
-  puts "Pulling new requests..."
-  ApplicationMailer.welcome_msg(User.last, "This is a test", User.last.email).deliver
-  puts "Done."
+	puts "Pulling new requests..."
+	User.all.each do |user|
+		if(user.number_path)
+			ApplicationMailer.workout_msg(user, Workout.first, user.number_path).deliver
+		end
+	end
+	puts "Done."
 end
 
