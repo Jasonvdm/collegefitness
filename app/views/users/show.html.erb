@@ -5,7 +5,7 @@
 
 		<div class="square">
 			<div class="row">
-				<div class="span4">
+				<div class="span5">
 					<div> Name: </div>
 				</div>
 				<div class="span4">
@@ -13,7 +13,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="span4">
+				<div class="span5">
 					<div> Email: </div>
 				</div>
 				<div class="span4">
@@ -22,7 +22,7 @@
 			</div>
 			<% if @user.number != "" %>
 			<div class="row">
-				<div class="span4">
+				<div class="span5">
 					<div> Number: </div>
 				</div>
 				<div class="span4">
@@ -30,16 +30,30 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="span4">
+				<div class="span5">
 					<div> Carrier: </div>
 				</div>
 				<div class="span4">
-					<div><%= @user.carrier %></div>
+					<div><%= @user.carrier %></div>	
 				</div>
 			</div>
 			<% end %>
+			<div class="row">
+				<div class="span5">
+					<div>Workout Difficulty: </div>
+				</div>
+				<div class="span4">
+					<div><%= @user.current_level_difficulty %></div>	
+				</div>
+			</div>
 			<div class="t-center">
-				<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary btn-edit"%> 
+				<div class="row">
+					<%= link_to 'Edit Profile', edit_user_path(@user), class: "btn btn-primary btn-edit"%>
+				</div> 
+				<div class="row">
+					<%= link_to 'Increase Difficulty', increase_difficulty_user_path(@user), method: :put, style: "width: 33%", class: "btn btn-primary btn-edit" %> 
+					<%= link_to 'Decrease Difficulty', decrease_difficulty_user_path(@user), method: :put, style: "width: 33%", class: "btn btn-primary btn-edit"%> 
+				</div>
 			</div>
 		</div>
 	</div>

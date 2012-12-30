@@ -42,6 +42,9 @@ gem 'bootstrap-sass', '~> 2.2.1.1'
 #https://github.com/plataformatec/devise
 gem 'devise'
 
+# http://rubygems.org/gems/spreadsheet
+gem "spreadsheet", "~> 0.7.5"
+
 #https://github.com/thoughtbot/paperclip.git
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 

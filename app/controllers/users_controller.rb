@@ -104,4 +104,43 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def increase_difficulty
+    @user = User.find(params[:id])
+    curr_difficulty = @user.current_level_difficulty
+    if curr_difficulty == "Beginner"
+      @user.current_level_difficulty = "Intermediate"
+    elsif curr_difficulty == "Intermediate"
+      @user.current_level_difficulty = "Advanced"
+    end  
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to user_url(@student), notice: "You have increased the difficulty of your workouts!" }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to user_url(@student), notice: "Error updating your profile" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def decrease_difficulty
+    @user = User.find(params[:id])
+    curr_difficulty = @user.current_level_difficulty
+    if curr_difficulty == "Advanced"
+      @user.current_level_difficulty = "Intermediate"
+    elsif curr_difficulty == "Intermediate"
+      @user.current_level_difficulty = "Beginner"
+    end  
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to user_url(@student), notice: "You have decreased the difficulty of your workouts!" }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to user_url(@student), notice: "Error updating your profile" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
 end

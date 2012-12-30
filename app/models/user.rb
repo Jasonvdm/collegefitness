@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :name, :number, :carrier, :contact_pref, :is_admin
   attr_accessible :has_equipment, :equipment_owned, :number_path
-
+  attr_accessible :current_level_difficulty
 
   def make_admin
     self.is_admin = true

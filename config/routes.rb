@@ -4,7 +4,12 @@ Collegefitness::Application.routes.draw do
 
   devise_for :users
 
-  resources :users
+  resources :users, except: [:new] do
+    member do
+      put 'increase_difficulty'
+      put 'decrease_difficulty'
+    end
+  end
 
   root :to => "home#index"
   get "home/index"

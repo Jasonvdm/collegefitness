@@ -1,0 +1,19 @@
+,,,,,
+,,,,,
+WID,Name,Type,Difficulty,Description,Equipment If Needed
+1,50x50x50,Strength/Core,Beginner,"Do 50 pushups, 50 situps and 50 air squats as fast as possible",None
+2,50x50x50 extreme,Strength/Core,Intermediate,"50 pushups,50 situps and 50 pullups - in that order",Pullup bar
+3,100x100x100,Strength/Core,Intermediate,"100 pushups, 100 situps and 100 airsquats as fast as possible",None
+4,100x100x100 extreme,Strength/Core,Advanced,"100 pushups, 100 situps and 100 pullups in that order and as fast as possible",Pullup bar
+5,Dumbbell Arm Workout,Strength/Core,Intermediate,"For 15 reps each: hammer curls, standard curls, lying tricep extension, overhead press. Repeat in a circuit three times.",Dumbbells
+6,Timed Burpees,Strength/Core,Intermediate,"Do 10 burpees, then 9, then 8 etc. until you have finished in as little time as possible.",None
+7,Extreme Timed Burpees,Strength/Core,Advanced,"Do 25 burpees, then 24, then 23 in descending order until you have finished, as fast as you can.",None
+8,High Reps Muscle Exhaustion,Strength,Advanced,"4 exercises for 50 reps each with a moderate weight, 25lb dumbbells recommended: overhead dumbbell press, bent-over dumbbell rows, dumbbell bench press, renegade rows. Take as many breaks as you need.",Dumbbells
+9,Plyometric Exercise,Strength/Core,Beginner,Do a total of 20 clap pushups and 40 jump squats.,None
+10,Plyometric Exercise,Strength/Core,Intermediate,Do a total of 40 clap pushups and 60 jump squats.,None
+11,Plyometric Exercise,Strength/Core,Advanced,Do a total of 60 clap pushups and 80 jump squats.,None
+12,Basic Yoga,Strength/Core,Beginner,"Perform the following yoga poses and hold them as long as you like: downward dog, child's pose, toe touches, twists.",None
+13,Intermediate Yoga,Strength/Core,Intermediate,"Perform the following yoga poses and hold them as long as you like: downward dog, child's pose, toe touches, twists, crow, bridge, wheel.",None
+14,Basic Pushup Workout,Strength,Beginner,"Do 20 pushups, then 10 pushups, then plank for as long as you can.",None
+15,Intermediate Pushup Workout,Strength,Intermediate,"Do 40 pushups, then 20 wide-grip pushups, then 20 tricep pushups.",None
+16,Challenging Pushup Workout,Strength,Advanced,"Perform 70 pushups, then 30 tricep pushups, then 20 slow pushups (4 seconds up, 4 seconds down).",None
