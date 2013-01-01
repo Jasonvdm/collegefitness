@@ -9,19 +9,27 @@
 		<div class="square" style="margin-top:0px">
 			<div class="row">
 				<div class="span3">
-					<h2> Gear: </h2>
+					Gear: 
 				</div>
 				<div class="span5">	
-					<% if @workout.equipment %>
-					<div><%= @workout.equipmentneeded %></div>
+					<% if @workout.has_equipment %>
+						<div><%= @workout.equipment_list %></div>
 					<% else %>
-					<div>None required </div>
+						<div>None required </div>
 					<% end %>
 				</div>
 			</div>
 			<div class="row">
 				<div class="span3">
-					<h2> Difficulty: </h2>
+					Type: 
+				</div>
+				<div class="span5">
+					<div><%= @workout.workout_type %></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span3">
+				 Difficulty: 
 				</div>
 				<div class="span5">
 					<div><%= @workout.difficulty %></div>
@@ -29,7 +37,7 @@
 			</div>
 			<div class="row">
 				<div class="span3">
-					<h2> Description: </h2>
+					Description: 
 				</div>
 				<div class="span5">
 					<div><%= @workout.description %></div>

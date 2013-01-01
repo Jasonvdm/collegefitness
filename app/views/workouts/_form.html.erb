@@ -4,8 +4,8 @@
 <div class="form-inputs">
   <%= f.input :name %>
   <%= f.input :avatar %>
-  <%= f.input :equipment, :label => "Is equipment required?", input_html: { id: "equipment_needed" }  %>
-  <%= f.input :equipmentneeded, :label => "What equipment is necessary?", :collection => workout_equipment, wrapper_html: { id: "equipment_list" }  %>
+  <%= f.input :has_equipment, :label => "Is equipment required?", input_html: { id: "equipment_needed" }  %>
+  <%= f.input :equipment_list, :label => "What equipment is necessary?", :collection => workout_equipment, wrapper_html: { id: "equipment_list" }  %>
   <%= f.input :description %>
   <%= f.input :difficulty, :collection => ["Beginner", "Intermediate", "Advanced", "Puking Possible"] %>
 </div>

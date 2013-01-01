@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121230043207) do
+ActiveRecord::Schema.define(:version => 20121231231432) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20121230043207) do
     t.string   "number_path"
     t.string   "current_level_difficulty", :default => "Beginner"
     t.string   "last_workout"
-    t.integer  "total_num_workouts"
+    t.integer  "total_num_workouts",       :default => 0
   end
 
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(:version => 20121230043207) do
     t.string   "name"
     t.text     "description"
     t.string   "difficulty"
-    t.boolean  "equipment"
-    t.string   "equipmentneeded"
+    t.boolean  "has_equipment"
+    t.string   "equipment_list"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.string   "avatar_file_name"

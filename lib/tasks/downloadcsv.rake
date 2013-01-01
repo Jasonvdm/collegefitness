@@ -6,7 +6,7 @@ task :downloadcsv => [:environment] do
 	puts "Starting process. Opening spreadsheet"	 
 	tmp_dir = File.expand_path('../', __FILE__)
 	puts tmp_dir
-	CSV.foreach("#{tmp_dir}/CollegeStrong.csv") do |row|
+	CSV.foreach("#{tmp_dir}/CollegeStrong.csv", :headers => true) do |row|
 		workouts = Workout.where(:wid => row[0])
 		if workouts.count == 0
 			workout = Workout.new
@@ -18,11 +18,11 @@ task :downloadcsv => [:environment] do
 		workout.workout_type = row[2]
 		workout.difficulty = row[3]
 		workout.description = row[4]
-		if row[5] == "None"
-			workout.equipment = true
-			workout.equipmentneeded = row[5]
+		if row[5] != "None"
+			workout.has_equipment = true
+			workout.equipment_list = row[5]
 		else
-			workout.equipment = false
+			workout.has_equipment = false
 		end
 		workout.save
 	end

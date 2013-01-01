@@ -11,7 +11,10 @@ Collegefitness::Application.routes.draw do
     end
   end
 
+  match 'about' => 'home#about', as: :about
+
   root :to => "home#index"
+
   get "home/index"
 
   # The priority is based upon order of creation:

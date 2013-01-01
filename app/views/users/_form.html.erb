@@ -15,7 +15,7 @@
 				<%= f.input :carrier, :collection => [ "Verizon", "AT&T", "T-Mobile", "Sprint", "Virgin Mobile", "US Cellular"], wrapper_html: { id: "carrier_selection" } %>
 				<%= f.input :has_equipment, :label => "Do you own any workout equipment?", input_html: { id: "has_equipment" }  %>
 				<%= f.input :equipment_owned, :collection => workout_equipment, :label => "What equipment do you own?",  input_html: {multiple: "multiple", class: "chosen"} %>
-
+				
 			</div>
 			<div>
 				<%= f.submit "Submit", :class => "btn btn-primary", :style => "width:150px; margin-top:10px" %>
