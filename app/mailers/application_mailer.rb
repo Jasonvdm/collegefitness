@@ -1,8 +1,8 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "jason.merwe@gmail.com"
+  default from: "workouts@collegestrong.com"
 
   def contact
-    mail(to: "6507141506@text.att.net", subject: "Feedback")
+    mail(to: "8655482427@vtext.com", subject: "")
   end
   
   def welcome_msg(user, msg, to)

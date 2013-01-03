@@ -46,6 +46,7 @@
 			<% if current_user.is_admin %>
 			<div class="t-center">
 				<%= link_to 'Edit', edit_workout_path(@workout), class: "btn btn-primary btn-edit" %> 
+				<%= link_to 'Delete', workout_path, class: "btn btn-primary btn-edit", :confirm => 'Are you sure you want to destroy this workout?', :method => :delete %>
 			</div>
 			<% end %>
 		</div>

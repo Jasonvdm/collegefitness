@@ -1,11 +1,11 @@
-<div id="myCarousel" class="carousel slide" style="margin-top: -15px; height: 600px;">
+<div id="myCarousel" class="carousel slide" style="margin-top: -15px;">
   <!-- Carousel items -->
   <div class="carousel-inner">
     <div class="active item">
-      <div class="img" style="background-image: url('/assets/covergym.jpg');">
+      <div class="img" style="background-image: url('/assets/covergym.jpg'); height: 700px">
         <% if !current_user %>
         <div class="carousel-caption"> 
-          <h1> Sign Up Now! </h1>
+          <h1> Working Out Just Got Easier. Sign Up Now! </h1>
           <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
           <table>

@@ -19,7 +19,7 @@ task :cron => [:environment] do
 			workouts = Workout.where(:difficulty => difficulty, :has_equipment => equipment_needed, :workout_type => exercise_type)
 			array_size = workouts.length
 			puts array_size
-			r = Random.rand(1...array_size)
+			r = Random.rand(0...array_size)
 			ApplicationMailer.workout_msg(user, workouts[r], user.number_path).deliver
 			user.last_workout = workouts[r].name
 			num_workouts = user.total_num_workouts
