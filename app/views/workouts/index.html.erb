@@ -8,11 +8,13 @@
 </div>
 
 <%= form_tag(params, :method => :get) do %>
-  <div class="field">
-    Sort By Areas of Expertise: <%= select("post", "difficulty", difficulty_levels, {:include_blank => "All"}) %>
-
-  </div>
-  <div class="actions"><%= submit_tag "Search" %></div>
+	<div class="field">
+		Sort By Difficulty: <%= select("post", "difficulty", difficulty_levels, {:include_blank => "All"}) %>
+	</div>
+	<div>
+		Sort By Workout Type: <%= select("post", "workout_type", workout_types, {:include_blank => "All"}) %>
+	</div>
+	<div class="actions"><%= submit_tag "Search",  :class => "btn" %></div>
 <% end %>
 
 

@@ -29,4 +29,12 @@ module ApplicationHelper
       'Advanced'
     ]
   end
+
+  def workout_types
+    [
+      'Cardio',
+      'Cross training',
+      'Strength'
+    ]
+  end
 end

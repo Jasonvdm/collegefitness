@@ -6,8 +6,15 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.all
-    paras = params[:difficulty]
-    raise paras.to_yaml
+    if !params[:post].blank?
+      paras = params[:post][:difficulty]
+      if paras == ""
+        @workouts = Workout.all
+      else
+        @workouts = Workout.where(:difficulty => paras)
+      end
+    end
+    
   end
 
   # GET /workouts/1
