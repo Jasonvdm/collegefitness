@@ -18,6 +18,15 @@ module ApplicationHelper
     	'Pull-up bar',
     	'Resistance bands',
     	'Medicine ball',
+      'Resistance bands'
+    ]
+  end
+
+  def difficulty_levels 
+    [
+      'Beginner',
+      'Intermediate',
+      'Advanced'
     ]
   end
 end

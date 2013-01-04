@@ -6,8 +6,18 @@
 		<% end %>
 	</div>
 </div>
+
+<%= form_tag(params, :method => :get) do %>
+  <div class="field">
+    Sort By Areas of Expertise: <%= select("post", "difficulty", difficulty_levels, {:include_blank => "All"}) %>
+
+  </div>
+  <div class="actions"><%= submit_tag "Search" %></div>
+<% end %>
+
+
 <% @workouts.each do |workout| %>
-	<%= render partial: "workout_card", locals: {workout:workout} %>
+	<%= render partial: "workout_card", locals: {workout: workout} %>
 <% end %>
 
 <br />
