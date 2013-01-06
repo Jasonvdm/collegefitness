@@ -23,4 +23,25 @@ $(document).ready(function(){
   $('.chosen').chosen();
   Users.initialize();
   Workouts.initialize();
+
+  $('#feedback-send').click(sendFeedback);
 });
+
+
+function sendFeedback(){
+  $('#feedback-send').button('loading');
+  $('#feedback-modal .alert').html("").hide();
+  var params = $('#feedback-form').serialize();
+  //console.log(params);
+  $.getJSON('/contact?' + params, function(response){
+    $('#feedback-send').button('reset');
+    console.log("response", response);
+    if (response.error){
+      $('#feedback-modal .alert-error').html(response.msg).show();
+    }
+    else {
+      $('#feedback-modal .alert-success').html(response.msg).show();
+      $('#feedback-form input, #feedback-form textarea').val("");
+    }
+  });
+}

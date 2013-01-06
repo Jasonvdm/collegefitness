@@ -2,6 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.footer {
+	height: 50px;
+	text-align:center;
+	font: 25px "roboto";
+	font-weight: 100;
+	color: black;
+	padding: 10px 0;
+	margin-bottom: 10px;
+
+	li {
+		list-style: none;
+		text-align: left;
+		padding: 2px;
+	}
+}
+
 .carousel div.img {
 	background-position: 50% 0;
 	background-repeat: no-repeat;
@@ -51,47 +68,47 @@
 }
 
 .square.about-portal {
-  background-color: white;
-  position: relative;
-  margin-top: -85px;
-  margin-bottom: 25px;
-  color: black;
-  font-size: 25px;
-  padding: 15px;
+	background-color: white;
+	position: relative;
+	margin-top: -85px;
+	margin-bottom: 25px;
+	color: black;
+	font-size: 25px;
+	padding: 15px;
 
-  .half-width {
-    width: 413px;
-  }
+	.half-width {
+		width: 413px;
+	}
 
-  .vr {
-    float: left;
+	.vr {
+		float: left;
 
-    height: 100px;
-  }
+		height: 100px;
+	}
 
-  .t-center {
-    margin-top: 5px;
-  }
+	.t-center {
+		margin-top: 5px;
+	}
 
-  .btn-center {
-    width: 200px;
-    margin-top: 10px;
-  }
+	.btn-center {
+		width: 200px;
+		margin-top: 10px;
+	}
 
-  @media (max-width: 979px) {
-    & {
-      height: initial;
-      width: 330px;
-      margin: 0 auto;
-      padding: 10px 15px;
-    }
-    .half-width {
-      width: 270px;
-      float: none;
-      margin: 30px auto;
-    }
-    .vr {display: none;}
-  }
+	@media (max-width: 979px) {
+		& {
+			height: initial;
+			width: 330px;
+			margin: 0 auto;
+			padding: 10px 15px;
+		}
+		.half-width {
+			width: 270px;
+			float: none;
+			margin: 30px auto;
+		}
+		.vr {display: none;}
+	}
 }
 
 .about_header {

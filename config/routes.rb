@@ -12,6 +12,7 @@ Collegefitness::Application.routes.draw do
   end
 
   match 'about' => 'home#about', as: :about
+  match 'contact' => 'home#contact', as: :contact
 
   root :to => "home#index"
 
