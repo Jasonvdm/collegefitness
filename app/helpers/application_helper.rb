@@ -18,7 +18,7 @@ module ApplicationHelper
     	'Pull-up bar',
     	'Resistance bands',
     	'Medicine ball',
-      'Resistance bands'
+      'Jump rope'
     ]
   end
 
