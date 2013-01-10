@@ -7,15 +7,8 @@ class ApplicationMailer < ActionMailer::Base
     mail(to: "jason.merwe@gmail.com", subject: "Feedback from CollegeStrong website")
   end
   
-  def welcome_msg(user, msg, to)
+  def welcome_msg(user, to)
     @user = user
-    @msg = msg
-    mail(to: to, subject: "")
-  end
-
-  def welcome_msg(user, msg, to)
-    @user = user
-    @msg = msg
     mail(to: to, subject: "")
   end
   
