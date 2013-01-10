@@ -1,6 +1,3 @@
-,,,,,
-,,,,,
-WID,Name,Type,Difficulty,Description,Equipment If Needed
 1,50x50x50,Cross training,Beginner,"Do 50 pushups, 50 situps and 50 air squats as fast as possible",None
 2,50x50x50 extreme,Cross training,Intermediate,"50 pushups,50 situps and 50 pullups - in that order",Pull-up bar
 3,100x100x100,Cross training,Intermediate,"100 pushups, 100 situps and 100 airsquats as fast as possible",None
@@ -12,8 +9,12 @@ WID,Name,Type,Difficulty,Description,Equipment If Needed
 9,Plyometric Exercise,Cross training,Beginner,Do a total of 20 clap pushups and 40 jump squats.,None
 10,Plyometric Exercise,Cross training,Intermediate,Do a total of 40 clap pushups and 60 jump squats.,None
 11,Plyometric Exercise,Cross training,Advanced,Do a total of 60 clap pushups and 80 jump squats.,None
-12,Basic Yoga,Strength/Core,Beginner,"Perform the following yoga poses and hold them as long as you like: downward dog, child's pose, toe touches, twists.",None
+12,Basic Yoga,Core,Beginner,"Perform the following yoga poses and hold them as long as you like: downward dog, child's pose, toe touches, twists.",None
 13,Intermediate Yoga,Cross training,Intermediate,"Perform the following yoga poses and hold them as long as you like: downward dog, child's pose, toe touches, twists, crow, bridge, wheel.",None
 14,Basic Pushup Workout,Strength,Beginner,"Do 20 pushups, then 10 pushups, then plank for as long as you can.",None
 15,Intermediate Pushup Workout,Strength,Intermediate,"Do 40 pushups, then 20 wide-grip pushups, then 20 tricep pushups.",None
 16,Challenging Pushup Workout,Strength,Advanced,"Perform 70 pushups, then 30 tricep pushups, then 20 slow pushups (4 seconds up, 4 seconds down).",None
+17,Basic Cardio,Cardio,Beginner,100 jumping jacks,None
+18,Intermediate Cardio,Cardio,Intermediate,"50 jumping jacks, 20 high jumps (jumping off both feet as high as you can). Repeat 3 times.",None
+19,Advanced Cardio,Cardio,Advanced,"50 jumping jacks, 30 high jumps, 20 bicycles. Repeat 3 times.",None
+20,Basic Jump Rope,Cardio,Beginner,"Two minutes of jump rope, rest two minutes, two more minutes of jump rope. Do at comfortable pace.",Jump rope
