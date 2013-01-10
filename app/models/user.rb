@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   validates_each :beta_key, :on => :create do |record, attr, value|
     record.errors.add attr, "Please enter correct invite code" unless
-      value && value == "12345"
+      value && value == "cs2013beta"
   end
 
   # Setup accessible (or protected) attributes for your model
