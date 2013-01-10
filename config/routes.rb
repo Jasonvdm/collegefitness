@@ -1,6 +1,7 @@
 Collegefitness::Application.routes.draw do
 
   resources :workouts
+  resources :admin
 
   devise_for :users
 
