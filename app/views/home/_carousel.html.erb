@@ -14,6 +14,10 @@
               <td width="45%"><%= f.input_field :email,  class: "signupforminput", :required => true, :autofocus => true %></td>
             </tr>
             <tr>
+              <td width="45%"><%= f.hint "Beta Key", class: "signupformlabel"  %></td>
+              <td width="45%"><%= f.input_field :beta_key,  class: "signupforminput", :required => true, :autofocus => true %></td>
+            </tr>
+            <tr>
               <td width="35%"><%= f.hint "Password", class: "signupformlabel"  %></td>
               <td width="45%"><%= f.input_field :password,  class: "signupforminput", :required => true %></td>
             </tr>

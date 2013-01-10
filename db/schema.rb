@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121231231432) do
+ActiveRecord::Schema.define(:version => 20130108084141) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20121231231432) do
     t.string   "current_level_difficulty", :default => "Beginner"
     t.string   "last_workout"
     t.integer  "total_num_workouts",       :default => 0
+    t.string   "beta_key"
   end
 
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
