@@ -5,6 +5,10 @@
 		<%= image_tag workout.avatar.url(:medium), :class => "image" %>
 		<div>Skill level: <%= workout.difficulty %></div>
 		<div>Workout type: <%= workout.workout_type %></div>
-		<div>Gear: <%= workout.equipment_list %></div>
+		<% if @workout.has_equipment %>
+		<div>Gear: <%= @workout.equipment_list %></div>
+		<% else %>
+		<div>Gear: None required </div>
+		<% end %>
 	</div>
 </a>
