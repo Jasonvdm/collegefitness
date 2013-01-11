@@ -5,6 +5,7 @@ task :cron => [:environment] do
 			difficulty = user.current_level_difficulty
 			equipment_needed = user.has_equipment 
 			time = Time.new
+			puts time
 			if time.wday == 1
 				exercise_type = "Cross training"
 			elsif time.wday == 2 
@@ -23,7 +24,11 @@ task :cron => [:environment] do
 			ApplicationMailer.workout_msg(user, workouts[r], user.number_path).deliver
 			user.last_workout = workouts[r].name
 			num_workouts = user.total_num_workouts
-			user.total_num_workouts = num_workouts + 1
+			if user.total_num_workouts.nil?
+				user.total_num_workouts = 1
+			else
+				user.total_num_workouts = num_workouts + 1
+			end
 			user.save
 		end
 	end
