@@ -20,6 +20,9 @@ Collegefitness::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.action_mailer.default_url_options = {
+    :host => "www.collegestrong.com"
+  }
 
   config.paperclip_defaults = {
     :storage => :s3,
