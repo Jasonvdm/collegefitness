@@ -22,7 +22,7 @@
 $(document).ready(function(){
   console.log('application.js doc.ready');
   $('#myCarousel').carousel()
-  $('.chosen').chosen();
+
   Users.initialize();
   Workouts.initialize();
 

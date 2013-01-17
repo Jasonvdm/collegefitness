@@ -1,10 +1,14 @@
 task :cron => [:environment] do
+	time = Time.new
+	if time.wday == 6 || time.wday == 7
+		puts "It's saturday or sunday, no need for working out"
+		return
+	end
 	puts "Pulling new requests..."
 	User.all.each do |user|
 		if(user.number_path)
 			difficulty = user.current_level_difficulty
 			equipment_needed = user.has_equipment 
-			time = Time.now
 			puts time
 			if time.wday == 1
 				exercise_type = "Cross training"
