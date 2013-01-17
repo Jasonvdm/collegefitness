@@ -17,6 +17,8 @@
 //= require chosen.jquery.min
 //= require jquery-ui-1.8.23.custom.min.js
 
+
+
 $(document).ready(function(){
   console.log('application.js doc.ready');
   $('#myCarousel').carousel()
