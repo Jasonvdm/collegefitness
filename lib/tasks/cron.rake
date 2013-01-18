@@ -10,6 +10,7 @@ task :cron => [:environment] do
 			difficulty = user.current_level_difficulty
 			equipment_needed = user.has_equipment 
 			puts time
+			puts user.name
 			if time.wday == 1
 				exercise_type = "Cross training"
 			elsif time.wday == 2 
