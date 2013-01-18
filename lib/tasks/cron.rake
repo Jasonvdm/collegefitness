@@ -27,6 +27,8 @@ task :cron => [:environment] do
 			puts array_size
 			r = Random.rand(0...array_size)
 			ApplicationMailer.workout_msg(user, workouts[r], user.number_path).deliver
+			puts user.number_path
+			puts workouts[r].name
 			user.last_workout = workouts[r].name
 			num_workouts = user.total_num_workouts
 			if user.total_num_workouts.nil?  
