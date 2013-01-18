@@ -24,6 +24,8 @@ Collegefitness::Application.configure do
     :host => "www.collegestrong.com"
   }
 
+  config.action_mailer.raise_delivery_errors = true
+
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
