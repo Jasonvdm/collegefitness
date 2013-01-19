@@ -2,7 +2,7 @@ task :cron => [:environment] do
 	time = Time.new
 	if time.wday == 6 || time.wday == 7
 		puts "It's saturday or sunday, no need for working out"
-		return
+		return false
 	end
 	puts "Pulling new requests..."
 	User.all.each do |user|
