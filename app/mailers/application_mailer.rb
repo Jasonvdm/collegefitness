@@ -3,7 +3,6 @@ class ApplicationMailer < ActionMailer::Base
 
   def contact(from, msg)
     @msg = msg
-
     mail(to: "jason.merwe@gmail.com", subject: "Feedback from CollegeStrong website")
   end
   
@@ -15,6 +14,11 @@ class ApplicationMailer < ActionMailer::Base
   def workout_msg(user, workout, to)
     @user = user
     @workout = workout
+    mail(to: to, subject: "")
+  end
+
+  def test_msg(user, to)
+    @user = user
     mail(to: to, subject: "")
   end
 end
