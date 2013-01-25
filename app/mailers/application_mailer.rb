@@ -9,7 +9,7 @@ class ApplicationMailer < ActionMailer::Base
   
   def welcome_msg(user, to)
     @user = user
-    mail(to: to, subject: "")
+    mail(to: to, subject: "Welcome to CollegeStrong")
   end
   
   def workout_msg(user, workout, to)
