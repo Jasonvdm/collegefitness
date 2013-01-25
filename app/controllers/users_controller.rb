@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
+  before_filter :find_user, except: [:index]
   before_filter :user_signed_in?
+  before_filter :admin_allow, only: [:index]
+  before_filter :is_owner?, only: [:index, :edit, :update, :destroy, :workspace]
 
   # GET /users
   # GET /users.json
@@ -67,6 +70,9 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     number = params[:user][:number]
+    result = /(?:(?:(?:\+?1)|(?:\(\+?1\)))?(?:(?:\s*)|-)([0-9]{3})(?:-|\s+)([0-9]{3})(?:-|\s+)([0-9]{4})|([0-9]{10}))/.match(number)
+    number = "#{result[1]}" + "#{result[2]}" + "#{result[3]}" + "#{result[4]}"
+    params[:user][:number] = number
     carrier = params[:user][:carrier]
     if carrier == "Verizon"
       params[:user][:number_path] = "#{number}" + "@vtext.com"
@@ -140,6 +146,36 @@ class UsersController < ApplicationController
         format.html { redirect_to user_url(@student), notice: "Error updating your profile" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  ###
+  # Filters
+  ###
+
+  def admin_allow
+    if !is_admin?
+      flash[:error] = general_error
+      redirect_to root_url
+    end
+  end
+
+   def find_user
+    @user = User.where(id: params[:id])[0]
+    puts @user
+    if @user.nil?
+      flash[:error] = error_404
+      redirect_to root_url  
+      return
+    end
+  end
+
+
+   def is_owner?
+    return true if is_admin?
+    if current_user != @user
+      flash[:error] = general_error
+      redirect_to root_path
     end
   end
 

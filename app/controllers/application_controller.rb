@@ -24,4 +24,9 @@ class ApplicationController < ActionController::Base
       workouts_path
     end
   end
+
+  def is_admin?
+    current_user && current_user.is_admin
+  end
+
 end
