@@ -81,7 +81,7 @@ class UsersController < ApplicationController
     elsif carrier == "US Cellular"
       params[:user][:number_path] = "#{number}" + "@email.uscc.net"
     end
-
+    params[:user][:equipment_owned] = params[:user][:equipment_owned].join(", ")
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to @user, notice: 'User was successfully updated.' }

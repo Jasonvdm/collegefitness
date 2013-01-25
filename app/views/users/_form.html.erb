@@ -13,8 +13,10 @@
 				</div>
 				<%= f.input :number, wrapper_html: {id: "number_pref"} %>
 				<%= f.input :carrier, :collection => [ "Verizon", "AT&T", "T-Mobile", "Sprint", "Virgin Mobile", "US Cellular"], wrapper_html: { id: "carrier_selection" } %>
+				<%= f.hint "What equipment do you own?", class: "form-edit" %>
 				<%= f.input :has_equipment, :label => "Do you own any workout equipment?", input_html: { id: "has_equipment" }  %>
-				<%= f.input :equipment_owned, :collection => workout_equipment, :label => "What equipment do you own?", :hint => "Hold cmd or ctrl to select multiple", :hint_html => {:style => "color:white"}, wrapper_html: {style: "color:white"},input_html: {multiple: "multiple", class: "chosen", style: "color:black"} %>
+				<%= f.hint "What equipment do you own?", class: "form-edit" %>
+				<%= f.input :equipment_owned, :collection => workout_equipment, :label => false,  wrapper_html: {style: "color:black"},input_html: {multiple: "multiple", class: "chosen", style: "color:black"} %> 	
 				
 			</div>
 			<div>
